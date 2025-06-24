@@ -11,12 +11,14 @@ import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.util.List;
 
 @Slf4j
 @RestController
 @RequestMapping("/api/cites")
+@CrossOrigin(origins = "http://localhost:8100") // <-- Ajoute ceci pour autoriser le frontend
 @RequiredArgsConstructor
 public class CiteAPI {
 
